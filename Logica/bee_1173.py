@@ -17,12 +17,3 @@ def imprime_lista(num) -> str:
 
 numero = int(input())
 imprime_lista(numero)
-
-# for n in lista:
-#     lista.append(n*2)
-#     if len(lista) == 10:
-#         break
-
-# for n in lista:
-#     print(f'N[{posicao}] = {n}')
-#     posicao += 1
