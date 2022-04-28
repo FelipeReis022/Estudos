@@ -21,5 +21,4 @@ numero_testes = int(input())
 while numero_testes > 0:
     numero_testes -= 1
     numero = int(input())
-    # objeto = soma_divisores(numero)
     print(impressao_teste(numero))
