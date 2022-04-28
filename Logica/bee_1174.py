@@ -1,17 +1,17 @@
-def imprime(lista_valores):
+def imprime_menor(lista_valores) -> str:
+    """Retorna em forma de str somente os valores
+    menores ou iguais a 10 dentro da lista, com sua
+    posição."""
     posicao = 0
-    for n in lista:
-        if n <= 10:
-            print(f'A[{posicao}] = {n:.1f}')
+    for valor in lista_numeros:
+        if valor <= 10:
+            print(f'A[{posicao}] = {valor:.1f}')
         posicao += 1
 
-lista = []
+lista_numeros = []
 
-while len(lista) < 3:
+while len(lista_numeros) < 100:
     numero = float(input())
-    lista.append(numero)
+    lista_numeros.append(numero)
 
-imprime(lista)
-
-
-
+imprime_menor(lista_numeros)
