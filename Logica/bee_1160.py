@@ -12,7 +12,7 @@ class Populacao():
         self.taxa_crescimento_2 = float(taxa_crescimento_2)
         self.anos = 0
 
-    def calculo(self) -> int:
+    def calcula_crescimento(self) -> int:
         """ Retorna em quantos anos a população 1 vai ficar maior que a 2"""
 
         while self.populacao_1 <= self.populacao_2:
@@ -22,12 +22,12 @@ class Populacao():
             if self.anos > 100:
                 break
         return self.anos
-
+ 
     def __str__(self) -> str:
-        if self.calculo() > 100:
+        if self.calcula_crescimento() > 100:
             return "Mais de 1 seculo."
         else:
-            return f'{self.calculo()} anos.'
+            return f'{self.calcula_crescimento()} anos.'
 
 numero_testes = int(input())
 
@@ -36,23 +36,3 @@ while numero_testes > 0:
     populacao_a, populacao_b, crescimento_a, crescimento_b = input().split()
     objeto = Populacao(populacao_a, populacao_b, crescimento_a, crescimento_b)
     print(objeto)
-    
-# while numero_testes > 0:
-#     numero_testes -= 1
-#     populacao_a, populacao_b, crescimento_a, crescimento_b = input().split()
-#     populacao_a = int(populacao_a)
-#     populacao_b = int(populacao_b)
-#     crescimento_a = float(crescimento_a)
-#     crescimento_b = float(crescimento_b)
-#     anos = 0
-#     while populacao_a <= populacao_b:
-#         anos += 1
-#         populacao_a = math.floor((populacao_a * (crescimento_a / 100)) + populacao_a)
-#         populacao_b = math.floor((populacao_b * (crescimento_b / 100)) + populacao_b)
-#         if anos > 100:
-#             break
-
-#     if anos > 100:
-#         print("Mais de 1 seculo")
-#     else:    
-#         print(f'{anos} anos.')
