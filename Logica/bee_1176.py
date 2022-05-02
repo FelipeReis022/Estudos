@@ -1,6 +1,5 @@
-
-def listafibonacci(numero_valores):
-    """"""
+def listafibonacci(numero_valores) -> list:
+    """Cria lista fibonacci com a quantidade de valor inserido"""
     a, b = 0, 1
     fibonacci = []
     for i in range(numero_valores + 1):
@@ -13,7 +12,7 @@ def listafibonacci(numero_valores):
         b = c
     return fibonacci
 
-def imprimevalor(numero):
+def imprimevalor(numero) -> str:
         objeto = listafibonacci(numero)
         if numero == 2:
             print(f'Fib(2) = 1')
